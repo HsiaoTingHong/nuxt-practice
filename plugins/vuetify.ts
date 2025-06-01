@@ -1,10 +1,3 @@
-// import this after install `@mdi/font` package
-// 引入 icon font
-import '@mdi/font/css/materialdesignicons.css';
-
-// 引入 Vuetify 樣式
-import 'vuetify/styles';
-
 import { createVuetify } from 'vuetify';
 
 // 元件與指令

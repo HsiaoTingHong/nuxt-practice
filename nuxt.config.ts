@@ -37,7 +37,9 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: [
-    '~/assets/css/tailwind.css',
+    '@mdi/font/css/materialdesignicons.css', // 先引入 icon font 樣式
+    'vuetify/styles', // 先引入 Vuetify 樣式
+    '~/assets/css/tailwind.css', // 最後再引入 Tailwind CSS 樣式
   ],
   postcss: {
     plugins: {
