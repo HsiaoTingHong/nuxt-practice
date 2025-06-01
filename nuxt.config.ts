@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/eslint',
+    '@pinia/nuxt',
   ],
   vite: {
     vue: {
