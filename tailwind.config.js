@@ -11,4 +11,7 @@ export default {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    preflight: false, // 禁用 Tailwind reset，避免干擾 Vuetify 的 reset
+  },
 };
