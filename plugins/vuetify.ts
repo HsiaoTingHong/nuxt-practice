@@ -1,12 +1,38 @@
 // import this after install `@mdi/font` package
+// 引入 icon font
 import '@mdi/font/css/materialdesignicons.css';
 
+// 引入 Vuetify 樣式
 import 'vuetify/styles';
+
 import { createVuetify } from 'vuetify';
+
+// 元件與指令
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
-    // ... your configuration
+    ssr: true, // SSR 支援
+    components,
+    directives,
+    // 自訂顏色
+    theme: {
+      defaultTheme: 'light',
+      themes: {
+        light: {
+          colors: {
+            primary: '#1976D2',
+            secondary: '#424242',
+            accent: '#82B1FF',
+            error: '#FF5252',
+            info: '#2196F3',
+            success: '#4CAF50',
+            warning: '#FFC107',
+          },
+        },
+      },
+    },
   });
   app.vueApp.use(vuetify);
 });

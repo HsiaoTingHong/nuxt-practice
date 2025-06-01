@@ -7,12 +7,6 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   modules: [
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error: vite config.plugins 的類型中未定義 vuetify plugin，但實際上是有效的
-        config.plugins.push(vuetify({ autoImport: true }));
-      });
-    },
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/image',
@@ -24,6 +18,11 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    plugins: [
+      vuetify({
+        autoImport: true,
+      }),
+    ],
   },
   devtools: { enabled: true },
   css: [
