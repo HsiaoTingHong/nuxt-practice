@@ -37,10 +37,17 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: [
-    '@mdi/font/css/materialdesignicons.css', // 先引入 icon font 樣式
-    'vuetify/styles', // 先引入 Vuetify 樣式
-    '~/assets/css/tailwind.css', // 最後再引入 Tailwind CSS 樣式
+    // '@master/normal.css', // 引入 MasterCSS reset 樣式(如果需要 reset)
+    // '@master/css', // 引入 MasterCSS 樣式(不需要引入)
+    '~/assets/css/tailwind.css', // 引入 Tailwind CSS 樣式
+    'vuetify/styles', // 引入 Vuetify 樣式
+    '@mdi/font/css/materialdesignicons.css', // 引入 icon font 樣式
   ],
+  // app: {
+  //   head: {
+  //     script: [{ innerHTML: 'window.MasterCSSManual = true;' }], // 防止 MasterCSS 自動初始化
+  //   },
+  // },
   postcss: {
     plugins: {
       tailwindcss: {},

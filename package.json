@@ -12,6 +12,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@master/css": "^1.37.8",
+    "@master/normal.css": "^3.2.0",
     "@mdi/font": "^7.4.47",
     "@nuxt/icon": "^1.13.0",
     "@nuxt/image": "^1.10.0",
