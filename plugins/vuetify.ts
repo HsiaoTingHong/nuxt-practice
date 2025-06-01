@@ -34,5 +34,5 @@ export default defineNuxtPlugin((app) => {
       },
     },
   });
-  app.vueApp.use(vuetify);
+  app.vueApp.use(vuetify); // 在 Nuxt 中真正掛載 Vuetify
 });

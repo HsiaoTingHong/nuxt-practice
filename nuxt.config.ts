@@ -19,11 +19,21 @@ export default defineNuxtConfig({
       },
     },
     plugins: [
+      // 編譯階段處理 Vuetify 樣式與自動引入
       vuetify({
-        autoImport: true,
+        autoImport: true, // 自動引入元件
+        // 客製 Sass 變數（grid、間距等)，需要時再加 assets/css/vuetify.scss
+        // styles: { configFile: 'assets/css/vuetify.scss' },
       }),
     ],
+    define: {
+      'process.env.DEBUG': false, // 關閉 Vuetify 的 debug log
+    },
   },
+  // 註冊 plugins
+  plugins: [
+    '~/plugins/vuetify.ts', // 通知 Nuxt 使用這個 plugin
+  ],
   devtools: { enabled: true },
   css: [
     '~/assets/css/tailwind.css',
