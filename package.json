@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@nuxt/icon": "^1.13.0",
     "@nuxt/image": "^1.10.0",
     "nuxt": "^3.17.4",
@@ -24,6 +25,8 @@
     "eslint": "^9.28.0",
     "postcss": "^8.5.4",
     "tailwindcss": "^3.4.17",
-    "vite-plugin-eslint2": "^5.0.3"
+    "vite-plugin-eslint2": "^5.0.3",
+    "vite-plugin-vuetify": "^2.1.1",
+    "vuetify": "^3.8.7"
   }
 }
